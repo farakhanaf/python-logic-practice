@@ -24,4 +24,18 @@ git push
 
 
 
+# Cara menghapus isi di dalam repo yang ada sekarang untuk diganti ke yang baru (lokal)
+
+cd (masuk ke folder project)
+git init
+git remote add origin https://github.com/farakhanaf/python-logic-practice.git
+git add .
+git commit -m "Initial commit from local version"
+
+# Ganti nama branch jadi main
+git branch -M main
+
+# Lakukan force push
+git push origin main --force
+
 ---
