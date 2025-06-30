@@ -1,0 +1,27 @@
+# Commands:
+
+cd path/ke/folder/proyek
+git init                    # Inisialisasi git lokal
+git add .                   # Menambahkan semua file ke staging
+git commit -m "First commit" # Commit awal
+
+Github:
+git remote add origin https://github.com/username/nama-repo.git
+
+Gitlab:
+git remote add origin https://github.com/username/nama-repo.git
+
+
+git branch -M main        # Ganti nama branch jadi main (opsional)
+git push -u origin main   # Upload ke GitHub/GitLab
+
+
+
+Update perubahan ke repo (next time):
+git add .
+git commit -m "Perbaikan logika"
+git push
+
+
+
+---
