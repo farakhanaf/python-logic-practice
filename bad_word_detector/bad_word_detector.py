@@ -28,13 +28,14 @@ def detect_bad_word(teks):
     # Pertama, konversi dulu kata yang masuk menjadi kecil
     teks = teks.lower()
     
-    # Logic untuk mendeteksi kata yang dilarang di dalam inputan
+    # 4. Bila terdeteksi kata terlarang di dalam inputan, maka beri keterangan 'Banned'
     for kata in bad_words:
         # Dilakukan pengecekan untuk setiap value di dalam list/dict
         if kata in teks:
             print('Maaf, anda di banned')
             return
-        
+    
+    # 5. Bila tidak ada kata yang terdeteksi maka inputan akan dimunculkan di program
     print(input_kalimat)
 
 # Call the bad word detector fucntion
