@@ -24,7 +24,7 @@ input_kalimat = input('Chat: ')
 # variable 'teks' itu bebas dalam artian ketika memanggil function ini dengan variable lainnya maka variable baru tersebut sama dengan variable teks (semoga mengerti, bisa ditanyakan lagi kalau masih bingung urutannya ya)
 def censor_bad_word(teks):
     # Pertama, konversi dulu kata yang masuk menjadi kecil
-    # Karena, bila tiap kata memiliki huruf besar atau kecil akan lebih rumit mendeteksinya
+    # Karena, bila tiap kata memiliki huruf besar atau kecil (case sensitive) akan lebih rumit mendeteksinya
     teks = teks.lower()
     
     # 4. Bila terdeteksi kata terlarang di dalam inputan, maka beri keterangan 'Banned'
