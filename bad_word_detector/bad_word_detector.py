@@ -36,12 +36,12 @@ def detect_bad_word(teks):
     for kata in bad_words:
         # Jika ada kata yang cocok dengan variable "teks/input_kalimat" maka...
         if kata in teks:
-            # Munculkan teks berikut...
-            print('Mohon untuk menghindari kata" yang dilarang')
-            return
+            teks = teks.replace(kata, "*" * len(kata))
     
     # 5. Bila tidak ada kata yang terdeteksi maka inputan akan dimunculkan di program
-    print(input_kalimat)
+    print(teks)
+    # Munculkan teks berikut...
+    print('Mohon untuk menghindari kata" yang dilarang')
 
 # Call the bad word detector fucntion
 detect_bad_word(input_kalimat)
