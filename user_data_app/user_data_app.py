@@ -63,9 +63,12 @@ with open("user_data_app/user_data.csv", "a", newline="") as file:
         # Buat variable dengan nama 'email' yang akan menampung email user lewat inputan
         email = input("Enter your email: ")
         
-        # Validasi...
+        # Validasi jika function email_validation(email) berhasil memasukan inputan user
+        # (Berhasil melewati validasi" yang ada) maka, data akan diwrite di file .csv
+        # Munculkan keterangan Data Saved
         if email_validation(email):
             writer.writerow([name, email])
             print("✅ Data saved.")
+        # Jika tidak maka inputan tidak akan diwrite ke file .csv, munculkan keterangan Data not saved
         else:
             print("❌ Invalid email. Data not saved.")
