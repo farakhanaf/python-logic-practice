@@ -38,4 +38,17 @@ git branch -M main
 # Lakukan force push
 git push origin main --force
 
+
+
+# Cek apakah status push nya ke github atau gitlab
+git remote -v
+
+Bila sudah, untuk mengganti dari gitlab ke github maka:
+git remote set-url --push origin https://github.com/farakhanaf/python-logic-practice.git
+
+Untuk mengganti dari github ke gitlab maka:
+git remote set-url --push origin git@gitlab.com:farakhan/python-logic-practice.git
+
+
+
 ---
