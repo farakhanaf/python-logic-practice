@@ -10,23 +10,32 @@ I do have skill issues since long time ago, but my bosses told me to not giving 
 
 # Practice Bad Word Detector
 
-# Dictonary/List of Bad Words
+### LOGIC ###
+# 1. Buat list kata" yang dilarang
+# 2. Buat inputan user ke dalam programnya
+# 3. Buat function yang mendeteksi inputan dengan list kata" yang dilarang
+# 4. Bila terdeteksi kata terlarang di dalam inputan, maka beri keterangan 'Banned'
+# 5. Bila tidak ada kata yang terdeteksi maka inputan akan dimunculkan di program
+
+# 1. Buat list kata" yang dilarang
 bad_words = ['bodoh', 'bangsat', 'anjing', 'kontol', 'goblok', 'tai', 'nigga']
 
-# User will input words here
+# 2. Buat inputan user ke dalam programnya
 input_kalimat = input('Chat: ')
 
-# Function to detect the bad word inside the input text
+# 3. Buat function yang mendeteksi inputan dengan list kata" yang dilarang
 def detect_bad_word(teks):
-    #pass
+    # Pertama, konversi dulu kata yang masuk menjadi kecil
+    teks = teks.lower()
     
-    # Logic to detect the bad word
+    # Logic untuk mendeteksi kata yang dilarang di dalam inputan
     for kata in bad_words:
-        # Dilakukan pengecekan untuk setiap 
-        if kata.lower() == teks.lower():
+        # Dilakukan pengecekan untuk setiap value di dalam list/dict
+        if kata in teks:
             print('Maaf, anda di banned')
-        else:
-            print(input_kalimat)
+            return
+        
+    print(input_kalimat)
 
 # Call the bad word detector fucntion
 detect_bad_word(input_kalimat)
