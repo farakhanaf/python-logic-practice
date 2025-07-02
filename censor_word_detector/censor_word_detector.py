@@ -38,10 +38,9 @@ def censor_bad_word(teks):
             # Dikalikan (* atau x) dengan jumlah len(kata) yang mana...
             # len(kata) --> memberikan informasi berapa jumlah huruf yang ada di dalam variable kata
             teks = teks.replace(kata, '*' * len(kata))
-            print(teks)
     
     # 5. Bila tidak ada kata yang terdeteksi maka inputan akan dimunculkan di program
-    print(input_kalimat)
+    print(teks)
 
 # Call the bad word detector fucntion
 censor_bad_word(input_kalimat)
