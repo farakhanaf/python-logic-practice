@@ -1,3 +1,8 @@
+# Function contents:
+- Function sederhana untuk mendeteksi kata kasar dari user input
+- Function sederhana untuk mensensor kata kasar dari user input
+
+
 # Commands:
 
 cd path/ke/folder/proyek
