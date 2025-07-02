@@ -18,7 +18,7 @@ I do have skill issues since long time ago, but my bosses told me to not giving 
 # 5. Bila tidak ada kata yang terdeteksi maka inputan akan dimunculkan di program
 
 # 1. Buat list kata" yang dilarang
-bad_words = ['bodoh', 'bangsat', 'anjing', 'kontol', 'goblok', 'tai', 'nigga', 'hitler']
+bad_words = ['bodoh', 'bangsat', 'anjing', 'kontol', 'goblok', 'tai', 'nigga', 'niggas', 'nigger', 'niggers', 'hitler', 'fuck', 'fucking']
 
 # 2. Buat inputan user ke dalam programnya
 input_kalimat = input('Chat: ')
