@@ -44,15 +44,26 @@ def email_validation(email):
 5. with ...:: Menggunakan context manager → otomatis menutup file setelah selesai
 '''
 with open("user_data_app/user_data.csv", "a", newline="") as file:
+    ''' Penjelasan "writer = csv.writer(file)"
+    1. csv.writer(...): Membuat objek writer dari modul csv
+    2. Objek ini digunakan untuk menulis data ke file CSV dengan format yang benar (misalnya setiap nilai jadi kolom)
+    '''
     writer = csv.writer(file)
     
+    # Dengan menggunakan loop While, selama masih True maka...:
     while True:
+        # Buat variable 'name' yang akan menyimpan inputan dari user
         name = input("Enter your name (or type 'exit' to quit): ")
+        # Tapi, Jika inputan di dalam variable 'nama' itu berisi inputan sama dengan 'exit'
+        # Dengan function lower() maka teks yang diinput dikonversi menjadi huruf kecil semua
         if name.lower() == 'exit':
+            # Program akan berhenti
             break
         
+        # Buat variable dengan nama 'email' yang akan menampung email user lewat inputan
         email = input("Enter your email: ")
         
+        # Validasi...
         if email_validation(email):
             writer.writerow([name, email])
             print("✅ Data saved.")
