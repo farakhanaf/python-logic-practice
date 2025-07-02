@@ -34,9 +34,9 @@ def censor_bad_word(teks):
         # Mengecek apakah kata (dari daftar bad_words) terdapat di dalam variable teks...
         if kata in teks:
             # Disini logicnya, variable teks sama dengan... =
-            # variable teks yang direplace: yaitu variable kata, diubah menjadi string '*'
-            # Dikalikan (* atau x) dengan jumlah len(kata) yang mana...
-            # len(kata) --> memberikan informasi berapa jumlah huruf yang ada di dalam variable kata
+            # variable teks.yang direplace: yaitu variable kata, diubah menjadi string '*'
+            # Yang dikalikan (* atau x) dengan jumlah len(kata) yang mana...
+            # len(kata) --> memberikan informasi berapa jumlah huruf yang ada di dalam variable kata (misal len dari kata saat ini adalah goblok = ****** yaitu 6 buah)
             teks = teks.replace(kata, '*' * len(kata))
     
     # 5. Bila tidak ada kata yang terdeteksi maka inputan akan dimunculkan di program
