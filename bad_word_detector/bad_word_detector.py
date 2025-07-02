@@ -14,7 +14,7 @@ I do have skill issues since long time ago, but my bosses told me to not giving 
 # 1. Buat list kata" yang dilarang
 # 2. Buat inputan user ke dalam programnya
 # 3. Buat function yang mendeteksi inputan dengan list kata" yang dilarang
-# 4. Bila terdeteksi kata terlarang di dalam inputan, maka beri keterangan 'Banned'
+# 4. Bila terdeteksi kata terlarang di dalam inputan, maka beri peringatan berupa teks
 # 5. Bila tidak ada kata yang terdeteksi maka inputan akan dimunculkan di program
 
 # 1. Buat list kata" yang dilarang
@@ -30,12 +30,16 @@ def detect_bad_word(teks):
     # Karena, bila tiap kata memiliki huruf besar atau kecil akan lebih rumit mendeteksinya
     teks = teks.lower()
     
-    # 4. Bila terdeteksi kata terlarang di dalam inputan, maka beri keterangan 'Banned'
+    # 4. Bila terdeteksi kata terlarang di dalam inputan, maka beri peringatan berupa teks
     # variable 'kata' disini adalah variable baru yang mewakilkan tiap value dari list bad_words oke?
     # jadi loop satu per satu untuk tiap tiap kata di bad_words dimana...
     for kata in bad_words:
-        # Jika ada kata yang cocok dengan variable "teks/input_kalimat" maka...
+        # Mengecek apakah kata (dari daftar bad_words) terdapat di dalam teks (yang sudah diinputkan oleh user).
         if kata in teks:
+            # Disini logicnya, variable teks sama dengan... =
+            # variable teks.yang direplace: yaitu variable kata, diubah menjadi string '*'
+            # Yang dikalikan (* atau x) dengan jumlah len(kata) yang mana...
+            # len(kata) --> memberikan informasi berapa jumlah huruf yang ada di dalam variable kata (misal len dari kata saat ini adalah goblok = ****** yaitu 6 buah)
             teks = teks.replace(kata, "*" * len(kata))
     
     # 5. Bila tidak ada kata yang terdeteksi maka inputan akan dimunculkan di program

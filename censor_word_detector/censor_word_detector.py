@@ -31,7 +31,7 @@ def censor_bad_word(teks):
     # variable 'kata' disini adalah variable baru yang mewakilkan tiap value dari list bad_words oke?
     # jadi loop satu per satu untuk tiap tiap kata di bad_words dimana...
     for kata in bad_words:
-        # Mengecek apakah kata (dari daftar bad_words) terdapat di dalam variable teks...
+        # Mengecek apakah kata (dari daftar bad_words) terdapat di dalam teks (yang sudah diinputkan oleh user).
         if kata in teks:
             # Disini logicnya, variable teks sama dengan... =
             # variable teks.yang direplace: yaitu variable kata, diubah menjadi string '*'
