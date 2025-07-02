@@ -1,0 +1,8 @@
+🔁 Level Selanjutnya:
+Kalau kamu sudah nyaman:
+
+Validasi lebih kuat → pakai regex
+
+Hindari email ganda → cek apakah email sudah ada di CSV
+
+Buat tampilan CLI interaktif (pakai argparse atau curses)
