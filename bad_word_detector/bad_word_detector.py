@@ -27,13 +27,16 @@ input_kalimat = input('Chat: ')
 # variable 'teks' itu bebas dalam artian ketika memanggil function ini dengan variable lainnya maka variable baru tersebut sama dengan variable teks (semoga mengerti, bisa ditanyakan lagi kalau masih bingung urutannya ya)
 def detect_bad_word(teks):
     # Pertama, konversi dulu kata yang masuk menjadi kecil
+    # Karena, bila tiap kata memiliki huruf besar atau kecil akan lebih rumit mendeteksinya
     teks = teks.lower()
     
     # 4. Bila terdeteksi kata terlarang di dalam inputan, maka beri keterangan 'Banned'
-    # Cek/Loop untuk setiap variable 'kata' di dalam list 'bad_words'
+    # variable 'kata' disini adalah variable baru yang mewakilkan tiap value dari list bad_words oke?
+    # jadi loop satu per satu untuk tiap tiap kata di bad_words dimana...
     for kata in bad_words:
-        # Jika kata ada yang cocok dengan list di variable teks maka
+        # Jika ada kata yang cocok dengan variable "teks/input_kalimat" maka...
         if kata in teks:
+            # Munculkan teks berikut...
             print('Mohon untuk menghindari kata" yang dilarang')
             return
     
