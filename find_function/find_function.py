@@ -15,8 +15,24 @@ print(teks.find("Java"))    # -1
 print("Python" in teks)  # True
 print("Java" in teks)    # False
 
-# User input untuk mencari sebuah kata
-find_something = input("Search... ")
-
 # Test apakah user input mendeteksi kata yang ada di dalam variable teks
-print(teks.find(find_something))  # 581
+# print(teks.find(find_something))  # 581
+
+
+
+### LOGIC ###
+# Kalau variable find_something tidak menemukan apapun (-1)
+# maka akan menampilkan keterangan "Not Found"
+
+def show_result(text):
+    is_found = teks.find(find_something)
+    if is_found == -1:
+        print("Not Found :(")
+    elif is_found != -1:
+        print("Teks",find_something,"ada di urutan:",is_found)
+            
+
+# User input untuk mencari sebuah kata dimasukan ke dalam variable find_something
+find_something = input("Search... ")
+# Function show_result langsung dipanggil setelah user input
+show_result(find_something)
