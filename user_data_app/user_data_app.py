@@ -35,6 +35,14 @@ def email_validation(email):
         return False
     
 # Buka (atau buat) file CSV untuk menyimpan data
+
+''' Penjelasan "with open("user_data_app/user_data.csv", "a", newline="") as file:"
+1. open(...): Membuka (atau membuat) file bernama user_data.csv
+2. "a": Mode append → artinya menambahkan baris ke akhir file, bukan menimpa isinya
+3. newline="": Mencegah baris kosong tambahan di Windows saat menulis ke CSV
+4. as file: File yang dibuka disimpan ke variabel file
+5. with ...:: Menggunakan context manager → otomatis menutup file setelah selesai
+'''
 with open("user_data_app/user_data.csv", "a", newline="") as file:
     writer = csv.writer(file)
     
