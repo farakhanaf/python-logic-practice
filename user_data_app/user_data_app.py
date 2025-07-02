@@ -50,7 +50,8 @@ with open("user_data_app/user_data.csv", "a", newline="") as file:
     '''
     writer = csv.writer(file)
     
-    # Dengan menggunakan loop While, selama masih True maka...:
+    # Dengan menggunakan loop While True maka akan membuat loop tak terbatas,
+    # Sampai break dijalankan cocok untuk terus menerima input user berulang kali
     while True:
         # Buat variable 'name' yang akan menyimpan inputan dari user
         name = input("Enter your name (or type 'exit' to quit): ")
